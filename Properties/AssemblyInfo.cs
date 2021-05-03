@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("slapi.stardew.xpmultiplier")]
+[assembly: AssemblyProduct("smapi.stardew.xpmultiplier")]
 [assembly: AssemblyCopyright("Copyright ©  2021 nofilenamed")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
