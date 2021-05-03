@@ -69,34 +69,39 @@ namespace XPMultiplier
 
     public static class GainXP
     {
-        public static void Prefix(Farmer _, int which, ref int howMuch)
+        public static void Prefix(Farmer __instance, int which, ref int howMuch)
         {
             if (howMuch <= 0)
                 return;
 
-            howMuch *= ModEntry.Config.General;
-
-            switch (which)
+            if (ModEntry.Config.General <= 1)
             {
-                case 0:
-                    howMuch *= ModEntry.Config.Farming;
-                    break;
-                case 1:
-                    howMuch *= ModEntry.Config.Fishing;
-                    break;
-                case 2:
-                    howMuch *= ModEntry.Config.Foraging;
-                    break;
-                case 3:
-                    howMuch *= ModEntry.Config.Mining;
-                    break;
-                case 4:
-                    howMuch *= ModEntry.Config.Combat;
-                    break;
-                case 5:
-                    howMuch *= ModEntry.Config.Luck;
-                    break;
+                switch (which)
+                {
+                    case 0:
+                        howMuch *= ModEntry.Config.Farming;
+                        break;
+                    case 1:
+                        howMuch *= ModEntry.Config.Fishing;
+                        break;
+                    case 2:
+                        howMuch *= ModEntry.Config.Foraging;
+                        break;
+                    case 3:
+                        howMuch *= ModEntry.Config.Mining;
+                        break;
+                    case 4:
+                        howMuch *= ModEntry.Config.Combat;
+                        break;
+                    case 5:
+                        howMuch *= ModEntry.Config.Luck;
+                        break;
+                }
+
+                return;
             }
+
+            howMuch *= ModEntry.Config.General;
         }
     }
 }
