@@ -10,19 +10,19 @@ namespace XPMultiplier
 {
     public sealed class ModConfig
     {
-        public byte General { get; set; } = 1;
+        public byte General { get; set; } = 15;
 
-        public byte Combat { get; set; } = 1;
+        public byte Combat { get; set; } = 15;
 
-        public byte Farming { get; set; } = 1;
+        public byte Farming { get; set; } = 15;
 
-        public byte Fishing { get; set; } = 1;
+        public byte Fishing { get; set; } = 15;
 
-        public byte Mining { get; set; } = 1;
+        public byte Mining { get; set; } = 15;
 
-        public byte Foraging { get; set; } = 1;
+        public byte Foraging { get; set; } = 15;
 
-        public byte Luck { get; set; } = 1;
+        public byte Luck { get; set; } = 15;
 
         public KeybindList ReloadKey { get; set; } = new KeybindList(SButton.F9);
     }
